@@ -1,5 +1,7 @@
 # Algoexpert.io
-
+https://www.algoexpert.io/questions
+https://github.com/alqamahjsr/Algorithms/tree/master/algoexpert.io/python
+https://github.com/pinglu85/algoExpert
 ## DAY 1
 
 ### Greedy Algorithm
