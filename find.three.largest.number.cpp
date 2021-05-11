@@ -7,16 +7,31 @@ space = O(1)
 
 */
 
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
 vector<int> largestNum(vector<int> &arr){
   vector<int> ans;
-  sort(arr.begin(), arr.end(), greater<int>());
+  sort(arr.begin(), arr.end(), greater<int>());     //nlogn
   if (arr.size()>=3){
     ans.push_back(arr[0]);
     ans.push_back(arr[1]);
     ans.push_back(arr[2]);
     return ans;
   }
-  else
-    vector<int> result(arr);
-    return result;
+  else{
+    return arr;}
+}
+int main()
+{   vector<int> arr = {5,8,9,2,4,6};
+    vector<int> ans;
+    ans = largestNum(arr);
+    for(auto it: ans){
+        cout<<it;
+    }
+
+    return 0;
 }
