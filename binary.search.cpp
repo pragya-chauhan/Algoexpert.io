@@ -16,25 +16,27 @@ middle left right
 
 */
 
-#include<iostream>
 
-int binarySearch(vector<int> &sortarray, int target){
-      int low = 0;
-    int high = sortarray.size()-1;
-  int mid = low+ (high-low)/2;
-  while(low<=high){
-  if (mid == target)
-    return mid;
-  else if(target>mid)
-    low = mid +1;
-  else
-    high = mid -1;
+
+
+int binarySearch(vector<int> &sortArray, int target){
+  int start = 0;
+  int end =(sortArray.size()-1);
+ 
+  
+  while(start<=end){
+     int mid = start +(end -start)/2;
+    if(sortArray[mid] == target)
+      return mid;
+    else if(sortArray[mid] > target)
+      end = mid -1;
+    else
+      start = mid +1;
+ 
   }
   return -1;
+  
+
+
 
 }
-
-
-
-int main(){}
-
